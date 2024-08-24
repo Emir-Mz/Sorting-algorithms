@@ -11,7 +11,7 @@ void printa(int set[10]){
 void printest(int set[10], int u, int o, int before){
 
     
-
+    
     for(int i = 0; i < 10; i++){
         if (i == u && before == 1) {
             printf("\e[0;32m%d \e[0m", set[i]);
@@ -31,12 +31,12 @@ void printest(int set[10], int u, int o, int before){
     }
 
     printf("\n");
-    printf("\n\n\n\n\n\n");
+    
 }
 
 void printblock(int set[10]){
 
-    
+    printf("\n\n\n\n\n\n");
 
     for (int i = 0; i < 10; i++)
     {
