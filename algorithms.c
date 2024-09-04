@@ -2,12 +2,6 @@
 #include <unistd.h> 
 #include "render.h"
 
-void clear_screen() {
-    // ANSI escape code to clear the screen
-    printf("\033[2J");
-    // ANSI escape code to move the cursor to the top-left corner
-    printf("\033[H");
-}
 
 void swap(int *first, int *second){
     int temp = *first;
@@ -49,5 +43,5 @@ void mysort(int set[10]){
             break;
         }
     }
-    printf("\npiterations: %d\n", iteration);  
+    printf("\n\titerations: %d\n", iteration);  
 }

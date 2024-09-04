@@ -3,14 +3,6 @@
 #include "algorithms.h"
 #include "render.h"
 
-void save_screen() {
-    system("tput smcup");
-}
-
-void restore_screen() {
-    system("tput rmcup");
-}
-
 int main(){
 	
 	int set[10] = {1,2,3,4,5,6,7,8,9,10};
@@ -21,18 +13,10 @@ int main(){
     printf("\n");
     printblock(random);
     printa(random);
-    printf("\n");
+    printf("\n\n\n");
     sleep(2);
 
     mysort(random);
-
-    printf("\n");
-    printa(random);
-    printf("\n");
-    printblock(random);
-    printa(random);
-    
-    printf("\n");
     sleep(2);
     restore_screen();
 	

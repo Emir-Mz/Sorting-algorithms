@@ -1,7 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+void clear_screen() {
+ 
+    printf("\033[2J");
+    
+    printf("\033[H");
+}
+
+void save_screen() {
+    system("tput smcup"); 
+}
+
+void restore_screen() {
+    system("tput rmcup"); 
+}
+
 
 void printa(int set[10]){
-
+    printf("\t");
     for(int i = 0; i < 10; i++){
         printf("%d ", set[i]);
     };
@@ -11,7 +28,8 @@ void printa(int set[10]){
 void printest(int set[10], int u, int o, int before){
 
     
-    
+    printf("\t");
+
     for(int i = 0; i < 10; i++){
         if (i == u && before == 1) {
             printf("\e[0;32m%d \e[0m", set[i]);
@@ -40,6 +58,7 @@ void printblock(int set[10]){
 
     for (int i = 0; i < 10; i++)
     {
+        printf("\t");
         for (int j = 0; j < 10; j++)
         {
             if (set[j] >= 10-(i))
@@ -48,7 +67,7 @@ void printblock(int set[10]){
             }
             else
             {
-                printf(". ");
+                printf("\x1b[30m. \x1b[0m");
             }
             
         }
